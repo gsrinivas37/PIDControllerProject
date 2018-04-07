@@ -64,14 +64,14 @@ for instructions and the project rubric.
 * You don't have to follow this directory structure, but if you do, your work
   will span all of the .cpp files here. Keep an eye out for TODOs.
 
-##Reflections
+## Reflections
 
-1. I initially set the tuning parameters to 1, 0.01 and 3 based on the lecture videos and some initial trial and error. It seem to a decent job of keeping vehicle on Track.
-2. I implemented Twiddle algorithm using PID classs with 1000 iterations and using reset message to reset the simulator. It was not as fast but it was tuning the parameters to minimize the average squared error.
-3. After tuning the parameters using twiddle, I found that even though the vehicle seems to on track and the error is minmized, the steering angles are too abrupt.
-4. So finally I adjusted all the parameters by a factor of 10 so as to minimize the abrupt steering angles and it worked great.
-5. Finally I used those parameters to drive the car around the whole loop and it was driving smoothly without going off the track.
-6. I used the variable twiddle_mode to run the vehicle in twiddle mode to tune parameters and normal mode.
+* I initially set the tuning parameters to 1, 0.01 and 3 based on the lecture videos and some initial trial and error. It seem to a decent job of keeping vehicle on Track.
+* I implemented Twiddle algorithm using PID classs with 1000 iterations and using reset message to reset the simulator. It was not as fast but it was tuning the parameters to minimize the average squared error.
+* After tuning the parameters using twiddle, I found that even though the vehicle seems to on track and the error is minmized, the steering angles are too abrupt.
+* So finally I adjusted all the parameters by a factor of 10 so as to minimize the abrupt steering angles and it worked great.
+* Finally I used those parameters to drive the car around the whole loop and it was driving smoothly without going off the track.
+* I used the variable twiddle_mode to run the vehicle in twiddle mode to tune parameters and normal mode.
 
 ## Call for IDE Profiles Pull Requests
 
