@@ -18,6 +18,20 @@ public:
   double Kd;
 
   /*
+  * Twiddle params
+  */
+  double Tp;
+  double Ti;
+  double Td;
+
+  long iter_count;
+  double total_square_error;
+  double best_error;
+
+  int i;
+  int step;
+
+  /*
   * Constructor
   */
   PID();
@@ -32,15 +46,33 @@ public:
   */
   void Init(double Kp, double Ki, double Kd);
 
+
+  /*
+  * Initialize Twiddle parameters.
+  */
+  void InitTwiddle(double Tp, double Ti, double Td);
+
   /*
   * Update the PID error variables given cross track error.
   */
   void UpdateError(double cte);
 
   /*
-  * Calculate the total PID error.
+  * Get Steering Angle.
   */
-  double TotalError();
+  double getSteeringAngle();
+
+  long getIterationCount();
+
+  double getAverageError();
+
+  double getBestError();
+
+  void setBestError(double error);
+
+  void updateTwiddleParams(double error);
+
+  void printValues();
 };
 
 #endif /* PID_H */
