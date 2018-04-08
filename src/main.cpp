@@ -47,7 +47,11 @@ int main()
 //	pid.InitTwiddle(0.5,0.005,1);
 
 	//Adjusting the parameters by a factor of 10 seems to fix the abrupt steering angle and make it smooth.
-	pid.Init(0.143,0.0011,0.93);
+//	pid.Init(0.143,0.0011,0.93);
+
+//	pid.Init(0.143,0,0);  //Trying only P controller
+//	pid.Init(0.143,0,0.93);  //Trying P and D Controller.
+	pid.Init(0.143,0.0011,0.93);  // PID Controller
 
 	pid.setBestError(max_init_error);
 
