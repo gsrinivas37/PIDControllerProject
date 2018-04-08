@@ -73,6 +73,19 @@ for instructions and the project rubric.
 * Finally I used those parameters to drive the car around the whole loop and it was driving smoothly without going off the track.
 * I used the variable twiddle_mode to run the vehicle in twiddle mode to tune parameters and normal mode.
 
+
+## Effects of individual parameters P, I and D
+
+* After I got the full solution working, I tried remvoing the I and D parameters to see what is the individual effect of P parameter. I found that the car oscillates too much and soon it leaves the track. The greater the value of P, the wilder are the oscillations. Below is the link I recorded with only P parameter.
+https://youtu.be/-dIeSFz59yw
+
+* Then I added the D parameter along with P. P and D parameters seems to be sufficient for running the car smoothly on the track for this project. D parameter will avoid the oscillations of the car and make the turnings smoother. I didn't notice significant problems even if I didn't include the integral parameter. I think integral part becomes important if the steering wheel is not aligned properly. Below is the link of PD controller.
+https://youtu.be/wNVoTk6CZ2Q
+
+* Below is the final PID controller video after including a small value of integral parameter as well.
+
+https://youtu.be/Ga56DX6WWEg
+
 ## Call for IDE Profiles Pull Requests
 
 Help your fellow students!
